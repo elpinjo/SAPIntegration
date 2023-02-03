@@ -1,0 +1,158 @@
+openapi: 3.0.0
+info:
+  title: Customer
+  description: Customer API retrieves and creates one or more customers from the SAP
+    backend.
+  contact:
+    name: Misja Heuveling
+    email: misja.heuveling@softwareag.com
+  version: "1.0"
+servers:
+- url: http://localhost:5555/restv2
+paths:
+  /customer:
+    get:
+      tags: []
+      summary: Get all customers
+      description: Retrieves a list of customers
+      operationId: getCustomers
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  customers:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Customer'
+    post:
+      summary: Create a new customer
+      description: Creates a new customer in SAP
+      operationId: createCustomer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Customer'
+      responses:
+        "201":
+          description: Created
+        "500":
+          description: Unable to create the customer
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /customer/{id}:
+    get:
+      tags: []
+      summary: Get single customer
+      description: Retrieves a customer based on its customer ID
+      operationId: getCustomerById
+      parameters:
+      - name: id
+        in: path
+        description: Unique Identifier of the customer
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Customer'
+        "404":
+          description: Customer could not be found in the system
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "500":
+          description: Something went wrong
+components:
+  schemas:
+    Customer:
+      title: Customer
+      required:
+      - address
+      - name
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        address:
+          required:
+          - city
+          - country
+          - countryCode
+          - street
+          - zipcode
+          type: object
+          properties:
+            id:
+              type: string
+            street:
+              type: string
+            zipcode:
+              type: string
+            city:
+              type: string
+            country:
+              type: string
+            countryCode:
+              type: string
+            regionId:
+              type: string
+            ? ""
+            : type: string
+        telephone:
+          type: string
+        fax:
+          type: string
+        sortCode:
+          type: string
+        details:
+          $ref: '#/components/schemas/CustomerDetails'
+      description: Model of a customer with its address
+      x-stoplight:
+        id: nehlw6twqofta
+    Error:
+      title: Error
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+      x-stoplight:
+        id: ai2vfj6gutonm
+    CustomerDetails:
+      title: CustomerDetails
+      type: object
+      properties:
+        accountGroup:
+          type: string
+        createdBy:
+          type: string
+        annualSales:
+          type: number
+        salesYear:
+          type: string
+        employees:
+          type: integer
+      x-stoplight:
+        id: xpk43zbr1bu0r
+x-stoplight:
+  id: 7ud0phugi02lm

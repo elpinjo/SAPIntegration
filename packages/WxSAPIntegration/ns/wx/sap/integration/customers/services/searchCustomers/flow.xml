@@ -1242,27 +1242,6 @@
 
   <!-- nodes -->
 
-<BRANCH TIMEOUT="" SWITCH="/unload">
-  <COMMENT></COMMENT>
-
-  <!-- nodes -->
-
-<SEQUENCE NAME="true" TIMEOUT="" EXIT-ON="FAILURE">
-  <COMMENT></COMMENT>
-
-  <!-- nodes -->
-
-<INVOKE TIMEOUT="" SERVICE="wx.sap.integration.customers.adapters.wrappers.kafka:produceBulkCustomers" VALIDATE-IN="$none" VALIDATE-OUT="$none">
-  <COMMENT></COMMENT>
-
-  <!-- nodes -->
-
-<MAP MODE="INPUT">
-</MAP>
-</INVOKE>
-</SEQUENCE>
-</BRANCH>
-
 <INVOKE TIMEOUT="" SERVICE="wx.sap.integration.customers.utils:setResponse" VALIDATE-IN="$none" VALIDATE-OUT="$none">
   <COMMENT></COMMENT>
 

@@ -11,4 +11,8 @@
   <value name="listACL">Default</value>
   <value name="webappLoad">yes</value>
   <value name="reloadWithDependentPackage">yes</value>
+  <null name="build"/>
+  <null name="description"/>
+  <null name="created_date"/>
+  <null name="extendedProperties"/>
 </Values>

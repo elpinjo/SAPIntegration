@@ -13,4 +13,30 @@
             </expected>
         </service>
     </webMethodsTestCase>
+    <webMethodsTestCase name="TestGetCustomerById-success">
+        <mock folder="wx.sap.integration.customers.adapters.unwrapped.sap" name="BAPI_CUSTOMER_GETDETAIL2">
+            <pipeline filename="resources/test/getCustomerById/BAPI_GETCUSTOMER_DETAIL_Mock_Success.xml"/>
+        </mock>
+        <service folder="customer.services" name="getCustomerById">
+            <input>
+                <file filename="resources/test/getCustomerById/InputSucces.xml"/>
+            </input>
+            <expected>
+                <file filename="resources/test/getCustomerById/outputSuccess.xml"/>
+            </expected>
+        </service>
+    </webMethodsTestCase>
+    <webMethodsTestCase name="TestGetCustomerById-notfound">
+        <mock folder="wx.sap.integration.customers.adapters.unwrapped.sap" name="BAPI_CUSTOMER_GETDETAIL2">
+            <pipeline filename="resources/test/getCustomerById/BAPI_GETCUSTOMER_DETAIL_Mock_Fail.xml"/>
+        </mock>
+        <service folder="customer.services" name="getCustomerById">
+            <input>
+                <file filename="resources/test/getCustomerById/InputNotFound.xml"/>
+            </input>
+            <expected>
+                <exception class="com.wm.lang.flow.FlowException" message="Customer 9384747475 does not exist"/>
+            </expected>
+        </service>
+    </webMethodsTestCase>
 </webMethodsTestSuite>

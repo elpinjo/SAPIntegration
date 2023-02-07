@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<IDataXMLCoder version="1.0">
+  <record javaclass="com.wm.data.ISMemDataImpl">
+    <record name="CUSTOMERGENERALDETAIL" javaclass="com.wm.data.ISMemDataImpl">
+      <value name="LOC_NO_1">0000000</value>
+      <value name="LOC_NO_2">00000</value>
+      <value name="CHK_DIGIT">0</value>
+      <value name="CREAT_DATE">0000-00-00</value>
+      <value name="ANN_SALES">0.0000</value>
+      <value name="SALES_YEAR">0000</value>
+      <value name="EMPLOYEES">000000</value>
+      <value name="EMPL_YEAR">0000</value>
+      <value name="ANN_SALES1">0.0000</value>
+      <value name="ASSIGN_HI">00</value>
+      <value name="CONF_DATE">0000-00-00</value>
+      <value name="CONF_TIME">00:00:00</value>
+    </record>
+    <record name="RETURN" javaclass="com.wm.data.ISMemDataImpl">
+      <value name="TYPE">E</value>
+      <value name="ID">FN</value>
+      <value name="NUMBER">502</value>
+      <value name="MESSAGE">Customer 9384747475 does not exist</value>
+      <value name="LOG_MSG_NO">000000</value>
+      <value name="MESSAGE_V1">Customer 9384747475</value>
+    </record>
+    <value name="$runtime">412</value>
+    <value name="$rfctime">411</value>
+    <value name="$encoding">utf-16</value>
+    <value name="$call">false</value>
+  </record>
+</IDataXMLCoder>

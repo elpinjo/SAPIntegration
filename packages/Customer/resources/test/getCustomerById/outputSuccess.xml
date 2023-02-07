@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<IDataXMLCoder version="1.0">
+  <record javaclass="com.wm.util.Values">
+    <record name="customer" javaclass="com.wm.data.ISMemDataImpl">
+      <value name="id">0000001002</value>
+      <value name="name">Omega Soft-Hardware Markt</value>
+      <record name="address" javaclass="com.wm.data.ISMemDataImpl">
+        <value name="id">0000006905</value>
+        <value name="street">Gustav-Jung-Strasse 425</value>
+        <value name="zipcode">90455</value>
+        <value name="city">Nuernberg</value>
+        <value name="country">DE</value>
+        <value name="countryCode">DE</value>
+        <value name="regionId">09</value>
+      </record>
+      <value name="telephone">09256-4548-0</value>
+      <value name="sortCode">OMEGA</value>
+      <record name="details" javaclass="com.wm.data.ISMemDataImpl">
+        <value name="accountGroup">0001</value>
+        <value name="createdBy">CURA</value>
+        <number name="annualSales" type="java.math.BigDecimal">0.0000</number>
+        <value name="salesYear">1995</value>
+        <number name="employees" type="java.lang.Integer">530</number>
+      </record>
+    </record>
+  </record>
+</IDataXMLCoder>

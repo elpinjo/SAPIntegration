@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<webMethodsTestSuite description="Tests the Customer API and it's operations" name="CustomerTestSuite">
+    <webMethodsTestCase name="TestGetAllCustomers">
+        <mock folder="wx.sap.integration.customers.adapters.unwrapped.sap" name="BAPI_CUSTOMER_GETLIST">
+            <pipeline filename="resources/test/getAllCustomers/BAPI_CUSTOMER_GETLIST_output.xml"/>
+        </mock>
+        <service folder="customer.services" name="getAllCustomers">
+            <input>
+                <file filename="resources/test/getAllCustomers/getAllCustomers_Output.xml"/>
+            </input>
+            <expected>
+                <file/>
+            </expected>
+        </service>
+    </webMethodsTestCase>
+</webMethodsTestSuite>

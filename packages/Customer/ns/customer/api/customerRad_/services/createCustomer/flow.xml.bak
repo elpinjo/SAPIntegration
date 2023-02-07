@@ -4,7 +4,7 @@
 
   <!-- nodes -->
 
-<EXIT FROM="$flow" SIGNAL="FAILURE" FAILURE-MESSAGE="">
+<EXIT FROM="$flow" SIGNAL="FAILURE" FAILURE-MESSAGE="NOT Implemented">
   <COMMENT></COMMENT>
 </EXIT>
 </FLOW>

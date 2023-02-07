@@ -12,7 +12,6 @@
       <value name="field_type">record</value>
       <value name="field_is_jsonSchema">true</value>
       <value name="field_dim">0</value>
-      <value name="wrapper_type">IData</value>
       <array name="field_content_type" type="record" depth="1">
         <record javaclass="com.wm.util.Values">
           <record name="extendedProperties" javaclass="com.wm.util.Values">
@@ -30,28 +29,21 @@
         </record>
       </array>
       <value name="nillable">true</value>
-      <Boolean name="readOnly">false</Boolean>
-      <Boolean name="writeOnly">false</Boolean>
       <array name="rec_fields" type="record" depth="1">
         <record javaclass="com.wm.util.Values">
           <value name="node_type">record</value>
           <value name="node_subtype">unknown</value>
-          <value name="node_comment"></value>
-          <record name="node_hints" javaclass="com.wm.util.Values">
-            <value name="field_largerEditor">false</value>
-            <value name="field_password">false</value>
-          </record>
           <value name="is_public">false</value>
           <value name="field_name">requestBody</value>
           <value name="field_type">record</value>
           <value name="field_is_jsonSchema">true</value>
           <value name="field_dim">0</value>
           <value name="field_opt">true</value>
-          <value name="wrapper_type">IData</value>
           <array name="rec_fields" type="record" depth="1">
             <record javaclass="com.wm.util.Values">
               <value name="node_type">record</value>
               <value name="node_subtype">unknown</value>
+              <value name="node_comment">application/json</value>
               <value name="is_public">false</value>
               <value name="field_name">Customer</value>
               <value name="field_type">recref</value>
@@ -74,7 +66,6 @@
       <value name="field_type">record</value>
       <value name="field_is_jsonSchema">true</value>
       <value name="field_dim">0</value>
-      <value name="wrapper_type">IData</value>
       <array name="field_content_type" type="record" depth="1">
         <record javaclass="com.wm.util.Values">
           <record name="extendedProperties" javaclass="com.wm.util.Values">
@@ -92,28 +83,47 @@
         </record>
       </array>
       <value name="nillable">true</value>
-      <Boolean name="readOnly">false</Boolean>
-      <Boolean name="writeOnly">false</Boolean>
       <array name="rec_fields" type="record" depth="1">
         <record javaclass="com.wm.util.Values">
           <value name="node_type">record</value>
           <value name="node_subtype">unknown</value>
-          <value name="node_comment"></value>
-          <record name="node_hints" javaclass="com.wm.util.Values">
-            <value name="field_largerEditor">false</value>
-            <value name="field_password">false</value>
-          </record>
+          <value name="is_public">false</value>
+          <value name="field_name">201</value>
+          <value name="field_type">record</value>
+          <value name="field_is_jsonSchema">true</value>
+          <value name="field_dim">0</value>
+          <value name="field_opt">true</value>
+          <array name="rec_fields" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="node_type">record</value>
+              <value name="node_subtype">unknown</value>
+              <value name="node_comment">application/json</value>
+              <value name="is_public">false</value>
+              <value name="field_name">Customer</value>
+              <value name="field_type">recref</value>
+              <value name="field_is_jsonSchema">true</value>
+              <value name="field_dim">0</value>
+              <value name="field_opt">true</value>
+              <value name="modifiable">true</value>
+              <value name="rec_ref">customer.api.customerRad_.docTypes:Customer</value>
+            </record>
+          </array>
+          <value name="modifiable">true</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="node_type">record</value>
+          <value name="node_subtype">unknown</value>
           <value name="is_public">false</value>
           <value name="field_name">500</value>
           <value name="field_type">record</value>
           <value name="field_is_jsonSchema">true</value>
           <value name="field_dim">0</value>
           <value name="field_opt">true</value>
-          <value name="wrapper_type">IData</value>
           <array name="rec_fields" type="record" depth="1">
             <record javaclass="com.wm.util.Values">
               <value name="node_type">record</value>
               <value name="node_subtype">unknown</value>
+              <value name="node_comment">application/json</value>
               <value name="is_public">false</value>
               <value name="field_name">Error</value>
               <value name="field_type">recref</value>
@@ -175,7 +185,7 @@
     <value>PATCH</value>
   </array>
   <value name="pipeline_option">1</value>
-  <value name="originURI">https://stoplight.io/api/v1/projects/mheuveling/sapintegration/nodes/reference/Customer.yaml?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwczovL3N0b3BsaWdodC5pby9qd3QvY2xhaW1zIjp7IngtaGFzdXJhLWRlZmF1bHQtcm9sZSI6IndvcmtzcGFjZV91c2VyIiwieC1oYXN1cmEtYWxsb3dlZC1yb2xlcyI6WyJ3b3Jrc3BhY2VfdXNlciJdLCJ4LWhhc3VyYS11c2VyLWlkIjoiMTk5ODc1IiwieC1oYXN1cmEtdXNlci1pcC1hZGRyZXNzIjoiMzUuMTkxLjE0LjQiLCJ4LWhhc3VyYS13b3Jrc3BhY2UtaWQiOiIxMTUzNzYifSwiaWF0IjoxNjY4ODU1MzI2LCJleHAiOjE2Njg4NTg5MjYsImlzcyI6InN0b3BsaWdodCIsInN1YiI6Ii91c2Vycy8xOTk4NzUifQ.KCqOFBCdoWDVMkWMb_d0EEhgjFFoh6ewA7LsIsyW91k</value>
+  <value name="originURI">https://stoplight.io/api/v1/projects/mheuveling/sapintegration/nodes/reference/Customer.yaml?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwczovL3N0b3BsaWdodC5pby9qd3QvY2xhaW1zIjp7IngtaGFzdXJhLWRlZmF1bHQtcm9sZSI6IndvcmtzcGFjZV91c2VyIiwieC1oYXN1cmEtYWxsb3dlZC1yb2xlcyI6WyJ3b3Jrc3BhY2VfdXNlciJdLCJ4LWhhc3VyYS11c2VyLWlkIjoiMTk5ODc1IiwieC1oYXN1cmEtdXNlci1pcC1hZGRyZXNzIjoiMzUuMTkxLjE1LjIyMCIsIngtaGFzdXJhLXdvcmtzcGFjZS1pZCI6IjExNTM3NiJ9LCJpYXQiOjE2NzU4MDYxODYsImV4cCI6MTY3NTgwOTc4NiwiaXNzIjoic3RvcGxpZ2h0Iiwic3ViIjoiL3VzZXJzLzE5OTg3NSJ9.p-_2AijzJsx-G7eXVCHo5wu_3vsQoqiN8wcFORMPEYs&amp;fromExportButton=true&amp;snapshotType=http_service&amp;_ga=2.216535638.1176517171.1675805829-805429240.1675805827</value>
   <value name="modifiable">true</value>
   <value name="is_public">false</value>
 </Values>

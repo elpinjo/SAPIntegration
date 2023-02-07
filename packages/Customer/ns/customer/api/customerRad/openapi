@@ -40,6 +40,34 @@ paths:
       responses:
         "201":
           description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Customer'
+              examples:
+                Example 1:
+                  value:
+                    id: string
+                    name: string
+                    address:
+                      id: string
+                      street: string
+                      zipcode: string
+                      city: string
+                      country: string
+                      countryCode: string
+                      regionId: string
+                      ? ""
+                      : string
+                    telephone: string
+                    fax: string
+                    sortCode: string
+                    details:
+                      accountGroup: string
+                      createdBy: string
+                      annualSales: 0
+                      salesYear: string
+                      employees: 0
         "500":
           description: Unable to create the customer
           content:

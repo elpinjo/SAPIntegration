@@ -6,10 +6,10 @@
         </mock>
         <service folder="customer.services" name="getAllCustomers">
             <input>
-                <file filename="resources/test/getAllCustomers/getAllCustomers_Output.xml"/>
+                <file/>
             </input>
             <expected>
-                <file/>
+                <file filename="resources/test/getAllCustomers/getAllCustomers_Output.xml"/>
             </expected>
         </service>
     </webMethodsTestCase>
